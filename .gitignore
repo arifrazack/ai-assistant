@@ -1,0 +1,142 @@
+# Dependencies
+node_modules/
+backend/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Next.js
+.next/
+out/
+build/
+dist/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+backend/.env
+backend/.env.local
+backend/.env.development.local
+backend/.env.test.local
+backend/.env.production.local
+
+# Logs
+*.log
+logs/
+backend/logs/
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Electron
+dist-electron/
+release/
+app/
+*.dmg
+*.exe
+*.deb
+*.rpm
+*.AppImage
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+*.stackdump
+
+# Temporary folders
+tmp/
+temp/
+.tmp/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# AI Assistant specific
+# Voice models (large files)
+models/*.bin
+whisper.cpp/models/*.bin
+*.wav
+*.mp3
+test.wav
+
+# Data files with sensitive information
+backend/data/google_tokens.json
+backend/data/contacts.json
+data/contacts.json
+
+# Whisper.cpp build artifacts (entire directory is a build artifact)
+whisper.cpp/
+whisper-cli
+
+# Electron build artifacts
+electron/notch-position.json
+
+# Temporary files
+temp/
+*.tmp
+
+# Python cache (if using Python scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local configuration
+config.local.json
+settings.local.json

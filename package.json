@@ -1,0 +1,83 @@
+{
+  "name": "ai-assistant",
+  "version": "1.0.0",
+  "description": "Intelligent AI-powered desktop assistant with voice recognition and 40+ automation tools",
+  "private": true,
+  "main": "electron/main.js",
+  "homepage": "./",
+  "author": "Arif Razack",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ai-assistant.git"
+  },
+  "keywords": ["ai", "assistant", "desktop", "automation", "voice", "electron", "nextjs"],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "backend": "cd backend && npm run dev",
+    "backend:install": "cd backend && npm install",
+    "full-install": "npm install && npm run backend:install",
+    "dev:all": "concurrently \"npm run backend\" \"npm run dev\"",
+    "init-contacts": "node scripts/init-contacts.js",
+    "refresh-contacts": "node scripts/init-contacts.js --refresh",
+    "postinstall": "node scripts/init-contacts.js",
+    "check-accessibility": "node scripts/setup-axcli.js",
+    "test-accessibility": "node scripts/setup-axcli.js --test",
+    "setup-whisper": "node scripts/setup-whisper.js",
+    "electron": "electron .",
+    "electron:dev": "concurrently \"npm run backend\" \"npm run dev\" \"wait-on http://localhost:5001 && electron .\"",
+    "build:electron": "npm run build && electron-builder",
+    "dist": "npm run build && electron-builder"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "google-auth-library": "^10.1.0",
+    "googleapis": "^153.0.0",
+    "next": "14.0.3",
+    "node-fetch": "^2.6.7",
+    "openai": "^5.10.1",
+    "playwright": "^1.54.1",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "concurrently": "^8.2.2",
+    "electron": "^27.3.11",
+    "electron-builder": "^24.13.3",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.3",
+    "typescript": "^5",
+    "wait-on": "^7.2.0"
+  },
+    "build": {
+    "appId": "com.arifrazack.ai-assistant",
+    "productName": "AI Assistant",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "out/**/*",
+      "electron/**/*",
+      "backend/**/*",
+      "node_modules/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "optionalDependencies": {
+    "electron-liquid-glass": "^1.0.1"
+  }
+}

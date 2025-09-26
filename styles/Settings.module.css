@@ -1,0 +1,276 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 40px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+}
+
+.settingsCard {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(40, 40, 42, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  padding: 32px 32px 0 32px;
+  text-align: center;
+}
+
+.section {
+  padding: 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 24px 0;
+}
+
+.authStatus {
+  margin-bottom: 24px;
+}
+
+.connectedStatus,
+.disconnectedStatus {
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.connectedStatus {
+  background: rgba(52, 199, 89, 0.1);
+  border-color: rgba(52, 199, 89, 0.3);
+}
+
+.disconnectedStatus {
+  background: rgba(255, 69, 58, 0.1);
+  border-color: rgba(255, 69, 58, 0.3);
+}
+
+.statusIndicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.connectedDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #34C759;
+  box-shadow: 0 0 8px rgba(52, 199, 89, 0.4);
+}
+
+.disconnectedDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #FF453A;
+  box-shadow: 0 0 8px rgba(255, 69, 58, 0.4);
+}
+
+.statusText {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.accountInfo {
+  margin-top: 16px;
+}
+
+.accountInfo p {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.authDescription {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.scopesInfo {
+  margin-top: 12px;
+}
+
+.scopesInfo p {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.scopesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.scopeItem {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.message {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin: 16px 0;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.authActions {
+  margin: 24px 0;
+}
+
+.connectOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.button {
+  background: linear-gradient(135deg, #007AFF 0%, #0056CC 100%);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  display: inline-block;
+  text-align: center;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+}
+
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 122, 255, 0.2);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.connectButton {
+  background: linear-gradient(135deg, #34C759 0%, #2A9D42 100%);
+}
+
+.connectButton:hover {
+  box-shadow: 0 4px 12px rgba(52, 199, 89, 0.3);
+}
+
+.connectFullButton {
+  background: linear-gradient(135deg, #FF9500 0%, #CC7700 100%);
+}
+
+.connectFullButton:hover {
+  box-shadow: 0 4px 12px rgba(255, 149, 0, 0.3);
+}
+
+.disconnectButton {
+  background: linear-gradient(135deg, #FF453A 0%, #CC362D 100%);
+}
+
+.disconnectButton:hover {
+  box-shadow: 0 4px 12px rgba(255, 69, 58, 0.3);
+}
+
+.refreshButton {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.refreshButton:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.1) 100%);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.refreshSection {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer {
+  padding: 24px 32px;
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.footerText {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 16px;
+  }
+  
+  .settingsCard {
+    margin: 0;
+  }
+  
+  .title {
+    font-size: 24px;
+    padding: 24px 24px 0 24px;
+  }
+  
+  .section {
+    padding: 24px;
+  }
+  
+  .footer {
+    padding: 20px 24px;
+  }
+  
+  .connectOptions {
+    gap: 10px;
+  }
+}
