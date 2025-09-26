@@ -22,7 +22,7 @@ This guide will walk you through setting up your AI Assistant from scratch.
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/ai-assistant.git
+git clone https://github.com/arifrazack/ai-assistant.git
 cd ai-assistant
 
 # Install all dependencies (frontend + backend)
@@ -293,7 +293,7 @@ npm run init-contacts
 ### Before Asking for Help
 1. Check this setup guide
 2. Review [Troubleshooting](#troubleshooting) section
-3. Search [existing issues](https://github.com/yourusername/ai-assistant/issues)
+3. Search [existing issues](https://github.com/arifrazack/ai-assistant/issues)
 
 ### Support Channels
 - **GitHub Issues**: Bug reports and feature requests

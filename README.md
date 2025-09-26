@@ -40,7 +40,7 @@ A sophisticated AI-powered personal assistant with a sleek, notch-inspired float
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/ai-assistant.git
+   git clone https://github.com/arifrazack/ai-assistant.git
    cd ai-assistant
    ```
 
@@ -350,9 +350,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/ai-assistant/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/ai-assistant/discussions)
-- **Documentation**: [Wiki](https://github.com/yourusername/ai-assistant/wiki)
+- **Issues**: [GitHub Issues](https://github.com/arifrazack/ai-assistant/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/arifrazack/ai-assistant/discussions)
+- **Documentation**: [Wiki](https://github.com/arifrazack/ai-assistant/wiki)
 
 ---
 

@@ -9,7 +9,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/ai-assistant.git"
+    "url": "https://github.com/arifrazack/ai-assistant.git"
   },
   "keywords": ["ai", "assistant", "desktop", "automation", "voice", "electron", "nextjs"],
   "scripts": {

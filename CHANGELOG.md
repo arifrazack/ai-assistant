@@ -142,4 +142,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-For more details about any release, see the corresponding [GitHub Release](https://github.com/yourusername/ai-assistant/releases).
+For more details about any release, see the corresponding [GitHub Release](https://github.com/arifrazack/ai-assistant/releases).

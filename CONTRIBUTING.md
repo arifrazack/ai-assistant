@@ -13,7 +13,7 @@ Thank you for your interest in contributing to the AI Assistant project! This do
 
 1. **Fork and Clone**
    ```bash
-   git clone https://github.com/yourusername/ai-assistant.git
+   git clone https://github.com/arifrazack/ai-assistant.git
    cd ai-assistant
    ```
 
@@ -383,8 +383,8 @@ If applicable, add screenshots of UI changes.
 
 ## 📞 Contact
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/ai-assistant/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/ai-assistant/discussions)
-- **Email**: your-email@domain.com
+- **Issues**: [GitHub Issues](https://github.com/arifrazack/ai-assistant/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/arifrazack/ai-assistant/discussions)
+- **Email**: razack0716@berkeley.edu
 
 Thank you for contributing to AI Assistant! 🚀
