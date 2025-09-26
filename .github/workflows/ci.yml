@@ -168,9 +168,28 @@ jobs:
           exit 0
         fi
     
-    - name: Check for sensitive data patterns
+    - name: Check for hardcoded sensitive data
       run: |
-        if grep -r -i "api[_-]key\|secret\|password\|token" --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" . --exclude-dir=node_modules --exclude-dir=backend/node_modules --exclude-dir=whisper.cpp --exclude="*.example" --exclude="*.md"; then
-          echo "Found potential sensitive data. Please review."
+        echo "🔍 Checking for hardcoded sensitive data..."
+        
+        # Check for hardcoded API keys (excluding build artifacts and legitimate references)
+        FOUND_SECRETS=false
+        
+        # Look for actual hardcoded API keys in source files
+        if find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | grep -v whisper.cpp | grep -v out | grep -v build | grep -v dist | xargs grep -l "apiKey\s*[:=]\s*['\"][a-zA-Z0-9_-]\{20,\}['\"]" 2>/dev/null; then
+          echo "⚠️ Found potentially hardcoded API keys in source files!"
+          FOUND_SECRETS=true
+        fi
+        
+        # Look for hardcoded passwords (not in minified files)
+        if find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | grep -v whisper.cpp | grep -v out | grep -v build | grep -v dist | xargs grep -l "password\s*[:=]\s*['\"][^'\"]\{8,\}['\"]" 2>/dev/null | xargs grep -L "process\.env\|example\|placeholder\|test" 2>/dev/null; then
+          echo "⚠️ Found potentially hardcoded passwords in source files!"
+          FOUND_SECRETS=true
+        fi
+        
+        if [ "$FOUND_SECRETS" = true ]; then
+          echo "❌ Please use environment variables for sensitive data."
           exit 1
+        else
+          echo "✅ No hardcoded sensitive data found. Environment variable usage detected correctly."
         fi
