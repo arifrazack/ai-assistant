@@ -28,23 +28,27 @@ interface ConfirmationData {
 }
 
 // Memoized components to reduce re-renders
-const StatusIndicator = React.memo(({ isLoading }: { isLoading: boolean }) => (
-  <div className={styles.statusIndicator}>
-    {isLoading ? (
-      <div className={styles.loadingSpinner}>⟳</div>
-    ) : (
-      <div className={styles.statusDot} />
-    )}
-  </div>
-));
+const StatusIndicator = React.memo(function StatusIndicator({ isLoading }: { isLoading: boolean }) {
+  return (
+    <div className={styles.statusIndicator}>
+      {isLoading ? (
+        <div className={styles.loadingSpinner}>⟳</div>
+      ) : (
+        <div className={styles.statusDot} />
+      )}
+    </div>
+  );
+});
 
-const ToolBadges = React.memo(({ tools }: { tools: string[] }) => (
-  <div className={styles.toolsUsed}>
-    {tools.map((tool, index) => (
-      <span key={index} className={styles.toolBadge}>{tool}</span>
-    ))}
-  </div>
-));
+const ToolBadges = React.memo(function ToolBadges({ tools }: { tools: string[] }) {
+  return (
+    <div className={styles.toolsUsed}>
+      {tools.map((tool, index) => (
+        <span key={index} className={styles.toolBadge}>{tool}</span>
+      ))}
+    </div>
+  );
+});
 
 export default function NotchUI({ className }: NotchUIProps) {
   // Optimized state management - combine related states
