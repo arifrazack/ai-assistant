@@ -80,8 +80,9 @@ export async function sendImessageToContact(contactName: string, message: string
     throw new Error(`❌ Could not send iMessage to ${contact.name}. Tried ${availableMethods.join(' and ')} but none worked. The contact might not have iMessage enabled or the addresses might be invalid.`);
     
   } catch (error) {
-    console.error('iMessage error:', error.message);
-    throw new Error(`Failed to send iMessage: ${error.message}`);
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    console.error('iMessage error:', errorMessage);
+    throw new Error(`Failed to send iMessage: ${errorMessage}`);
   }
 }
 
@@ -175,8 +176,9 @@ end tell`;
     });
     
   } catch (fileErr) {
+    const errorMessage = fileErr instanceof Error ? fileErr.message : String(fileErr);
     console.error('Failed to create temp AppleScript file:', fileErr);
-    throw new Error(`Failed to prepare iMessage script: ${fileErr.message}`);
+    throw new Error(`Failed to prepare iMessage script: ${errorMessage}`);
   }
 }
 

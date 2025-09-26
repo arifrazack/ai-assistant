@@ -75,7 +75,8 @@ ${searchResults.map((result, i) => `${i + 1}. ${result}`).join('\n')}
     console.error('Playwright browsing error:', error);
     
     // Provide helpful error messages for common issues
-    if (error.message.includes('Cannot find module')) {
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    if (errorMessage.includes('Cannot find module')) {
       return `❌ Playwright not installed. To use automated browsing:
 1. Run: npm install playwright
 2. Run: npx playwright install
@@ -145,10 +146,11 @@ export async function browseWebsitePlaywright(url: string, action: string = 'ext
   } catch (error) {
     console.error('Website browsing error:', error);
     
-    if (error.message.includes('Cannot find module')) {
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    if (errorMessage.includes('Cannot find module')) {
       return `❌ Playwright not installed. Install with: npm install playwright && npx playwright install`;
     }
     
-    throw new Error(`Failed to browse website: ${error instanceof Error ? error.message : String(error)}`);
+    throw new Error(`Failed to browse website: ${errorMessage}`);
   }
 } 

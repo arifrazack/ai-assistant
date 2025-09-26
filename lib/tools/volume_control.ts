@@ -32,9 +32,9 @@ export async function controlVolume(params: { volume?: number, action?: string, 
         let newVolume = currentVolume;
         
         if (params.action === 'up') {
-          newVolume = Math.min(100, currentVolume + params.level);
+          newVolume = Math.min(100, currentVolume + (params.level || 10));
         } else if (params.action === 'down') {
-          newVolume = Math.max(0, currentVolume - params.level);
+          newVolume = Math.max(0, currentVolume - (params.level || 10));
         }
         
         exec(`osascript -e 'set volume output volume ${newVolume}'`, (err) => {

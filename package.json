@@ -11,7 +11,15 @@
     "type": "git",
     "url": "https://github.com/arifrazack/ai-assistant.git"
   },
-  "keywords": ["ai", "assistant", "desktop", "automation", "voice", "electron", "nextjs"],
+  "keywords": [
+    "ai",
+    "assistant",
+    "desktop",
+    "automation",
+    "voice",
+    "electron",
+    "nextjs"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -36,7 +44,7 @@
     "axios": "^1.6.2",
     "google-auth-library": "^10.1.0",
     "googleapis": "^153.0.0",
-    "next": "14.0.3",
+    "next": "^14.2.33",
     "node-fetch": "^2.6.7",
     "openai": "^5.10.1",
     "playwright": "^1.54.1",
@@ -48,14 +56,14 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "concurrently": "^8.2.2",
-    "electron": "^27.3.11",
+    "electron": "^36.0.0",
     "electron-builder": "^24.13.3",
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
     "typescript": "^5",
     "wait-on": "^7.2.0"
   },
-    "build": {
+  "build": {
     "appId": "com.arifrazack.ai-assistant",
     "productName": "AI Assistant",
     "directories": {
